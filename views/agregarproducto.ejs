@@ -4,32 +4,32 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <h1 class="text-center">Agregar Producto</h1>
+            <h1 class="text-center"><p class="fw-bold my-1">Agregar Producto</p></h1>
             <form id="add-form" action="/agregar" method="post" enctype="multipart/form-data">
                 </div>
                 <div class= "mb-3">
-                    <label class = "form-label" for="articulo">Articulo</label>
-                    <input class="form-control" id="articulo" name="articulo" type="text" placeholder="Articulo">
+                    <label class = "form-label" for="articulo"><p class="fw-bolder my-2">Artículo</p></label>
+                    <input class="form-control" id="articulo" name="articulo" type="text" placeholder="Nombre del artículo">
                  </div>
                     <div class= "mb-3">
-                        <label class = "form-label" for="descripcion">Descripcion</label>
-                        <input class="form-control" id="descripcion" name="descripcion" type="text" placeholder="Descripcion">
+                        <label class = "form-label" for="descripcion"><p class="fw-bolder my-1">Descripción</p></label>
+                        <input class="form-control" id="descripcion" name="descripcion" type="text" placeholder="Color, detalles, entre otros.">
                     </div>
                     <div class= "mb-3">
-                        <label class = "form-label" for="stock">Stock</label>
-                        <input class="form-control" id="stock" name="stock" type="number" placeholder="Stock">
+                        <label class = "form-label" for="stock"><p class="fw-bolder my-1">Stock</p></label>
+                        <input class="form-control" id="stock" name="stock" type="number" placeholder="Cantidad existente del artículo.">
                     </div>
                     <div class= "mb-3">
-                        <label class = "form-label" for="precio">Precio</label>
-                        <input class="form-control" id="precio" name="precio" type="number" placeholder="Precio">
+                        <label class = "form-label" for="precio"><p class="fw-bolder my-1">Precio</p></label>
+                        <input class="form-control" id="precio" name="precio" type="number" placeholder="Valor del artículo.">
                     </div>
                     <div class= "mb-3">
-                        <label for= "imagen" class="form-label">Imagen</label>
+                        <label for= "imagen" class="form-label"><p class="fw-bolder my-1">Imagen</p></label>
                         <input name="imagen" class="form-control" type="file" required>
                     </div>
 
                     <div class="d-grid">
-                        <input type="submit" class="btn btn-primary btn-1g" value="Agregar Producto">
+                        <input type="submit" class="btn btn-dark btn-1g my-3 fw-bolder" value="Añadir">
                     </div>
             </form>
         </div>
