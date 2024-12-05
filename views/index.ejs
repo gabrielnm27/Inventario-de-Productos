@@ -1,0 +1,49 @@
+<%- include('layouts/header') %>
+
+<div class="container">
+    <div class="row my-4">
+        <div class="col-lg-12">
+            <% if(message){ %>
+            <div class="alert alert-dismissible fade show alert-<%= message.type %>"role="alert">
+                <button class="btn-close" type="'button" data-bs-dismiss="alert" aria-label="Close"></button>
+                <strong>
+                    <%= message.message %>
+                </strong>
+            </div>
+            <% } %>
+            <div class="table-responsive">
+                <table class="table table-striped text-center">
+                    <thead>
+                        <tr class="table-dark">
+                            <th>Codigo</th>
+                            <th>Imagen</th>
+                            <th>Articulo</th>
+                            <th>Descripcion</th>
+                            <th>Stock</th>
+                            <th>Precio</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% productos.forEach((productos, index) => { %>
+                        <tr class="align-middle">
+                            <td><%= ++index  %></td>
+                            <td><img src="<%= productos.imagen %>" width="50" class="img-thumbnail"></td>
+                            <td><%= productos.articulo %></td>
+                            <td><%= productos.descripcion %></td>
+                            <td><%= productos.stock %></td>
+                            <td><%= productos.precio %></td>
+                            <td>
+                                <a href="/editar/<%= productos._id%>" class="fa fa-edit fa-lg"></a>
+                                <a href="/eliminar/<%= productos._id%>" class="fa fa-trash fa-lg"></a>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('layouts/footer') %>
